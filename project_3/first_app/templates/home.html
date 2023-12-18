@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Document</h1>
+    <h2>Author: {{author}}</h2>
+    <h2>Age: {{age}}</h2>
+    <h2>{{lst}}</h2>
+    
+    
+    {% if age >= 20 %}
+        <h4>YOu will get driving licensee</h4>
+    {% elif age >= 10 and age <= 19 %}
+        <h4>YOu will get not get driving licensee</h4>
+    {% else %}
+        <h4>You're a child</h4>
+    {% endif %}
+{{lst}}
+<h1>{{ lst | join:"  " }} </h1>
+<h1>{{ birthday | date:"D d M Y" }}</h1>
+    {% for i in courses %}
+    <h3>{{i.id}} {{i.name}} {{i.fee}} </h3>
+    {% endfor %}
+
+
+
+</body>
+</html>
+
+echo "# django-course" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/arsiddik7615/django-course.git
+git push -u origin main
